@@ -1,0 +1,50 @@
+$parent-class: dropdown;
+
+.#{$parent-class} {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.#{$parent-class}-selected {
+  border: 1px solid;
+  cursor: pointer;
+  padding: 2px 0px;
+}
+
+.#{$parent-class}-list {
+  opacity: 0;
+  overflow: hidden;
+  transition: all .5s;
+  overflow: hidden;
+
+  &-options{
+    border: 1px solid;
+    list-style: none;
+    padding: 0px;
+    
+    li{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 5px 0px;
+      border-bottom: solid 0.5px black;
+
+      &:last-child {
+        border-bottom: none
+      }
+    }
+
+    li:hover{ 
+      font-weight: 700;
+      border-bottom: solid 2px black;
+    }
+
+  }
+}
+
+.#{$parent-class}-list-open {
+  opacity: 1;
+}
